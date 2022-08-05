@@ -1,7 +1,32 @@
 <h2>Hello World</h2>
 
+<a href="https://www.simplilearn.com/tutorials/angular-tutorial/angular-pipes">Reference Article </a>
+<!-- BASIC PIPES : 
 
-<!-- INTERPOLATION : GETTING DATA FROM TS FILE TO HTML FILE -->
-<h1>{{ myname }}</h1>
+  WHY TO USE PIPES
+  1)to beautify the data
+  2)It displays human readable format
 
-<h1>{{ student.rank }}</h1>
+
+-->
+
+<h1>
+  {{ title | uppercase }}
+  <br>
+  {{ title | slice: 3:8 }}
+
+  <br>
+
+  {{ myname | json | uppercase }}
+  <br>
+
+  {{ 5000 | currency: "INR" }}
+
+  The hero's birthday is {{ birthday | date }} 
+  <br>
+  
+  Name: {{ myname | slice: 2 }} 
+  <br>
+
+  <p>The hero's birthday is {{ birthday | date: "MM/dd/yy" }}</p>
+</h1>
