@@ -22,7 +22,7 @@ export class CustomPipeComponent implements OnInit {
 @Pipe({
   name: 'toGrams' //THIS NAME WILL BE USED ON CORRESPONDING HTML TEMPLATE
 })
-export class ToGramsPipe {
+export class ToGramsPipe implements PipeTransform {
 
 
   transform(n: number, extension: string = 'grams') {
