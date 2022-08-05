@@ -1,3 +1,5 @@
+
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'handson-project';
+  myname = 'Viplav';
+
+  student = { name: 'viplav', rank: 23 };
 }
