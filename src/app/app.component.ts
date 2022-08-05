@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'handson-project';
   myname = 'Viplav';
-
+  myrank = 101;
   student = { name: 'viplav', rank: 23 };
 }
