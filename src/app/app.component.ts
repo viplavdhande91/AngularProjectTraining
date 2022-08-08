@@ -12,4 +12,17 @@ export class AppComponent {
   myname = 'Viplav';
 
   student = { name: 'viplav', rank: 23 };
+
+  displayAlert() {
+
+    alert("Button Clicked");
+
+  }
+
+  getData(val:string)
+  {
+    console.log("mouseenter");
+  }
+
+  
 }
