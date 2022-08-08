@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'handson-project';
-  myname = 'Viplav';
 
-  student = { name: 'viplav', rank: 23 };
+  title = 'Property Binding';
+  name = "Peter";
+  statusOfDisabled = false; //CHECK FOR BOTH VALUES true/false
+
 }
