@@ -19,3 +19,8 @@
 ```bash
   ng generate component c3 --inline-style --inline-template
 ```
+
+## Notes[Why we should go with this options]
+
+#### 1)Incase of very less styling we can use inline css component.
+#### 2)Incase of very less html we can use inline html component.
