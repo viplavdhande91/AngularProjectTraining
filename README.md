@@ -1,5 +1,5 @@
 
-# Component with Inline Style
+# Module
 
 
 
