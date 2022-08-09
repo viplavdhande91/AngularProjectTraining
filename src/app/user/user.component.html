@@ -1,6 +1,6 @@
 <p>child component</p>
 
 
-<h2>{{dataSendFromParent.name}}</h2>
+<input type="text" #box/>
 
-<h2>{{dataSendFromParent.rank}}</h2>
+<button (click) = "GetDataFromChildEvent.emit(box.value)">Send Data to Parent </button>

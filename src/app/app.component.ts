@@ -9,7 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  
+  GetDataFromChild(item : string)
+  {  
+     console.log(item);
+  }
 
-  student = { name: 'viplav', rank: 23 };
-  data  = "bruce";
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 
 
@@ -10,13 +10,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @Input() dataSendFromParent: any;
 
   constructor() { }
-
+   
+  @Output() GetDataFromChildEvent = new EventEmitter<string>(); //string because we have to pass string data
   ngOnInit(): void {
 
-    console.log(this.dataSendFromParent);
   }
 
 }

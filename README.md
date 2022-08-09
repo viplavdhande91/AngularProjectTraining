@@ -1,18 +1,18 @@
 
-# Send data from Parent to Child Component
+# Send data from Child to Parent Component
 
 
 #### 1. Parent Component =>app ; Child Component =>user 
 
 
-#### 2. create data in app.component ts.
+#### 2. create GetDataFromChild() function in app.component ts.Because we have to pass this function to Child Component.
 
 #### 3. Import display selector of user component in app.component.html file. i.e <app-user>  </app-user>
 
-#### 4. Bind dataSendFromParent property in app.component.html
+#### 4. Bind GetDataFromChildEvent with GetDataFromChild() function in app.component.html
 
-#### 5. Import Input from angular Core in user.component.ts file
+#### 5. Import Output,EventEmitter from angular Core in user.component.ts file
 
-#### 6. Input Decorator inside class imports data. 
+#### 6. Output Decorator sends data by help of recieved  function GetDataFromChildEvent. 
 
-#### 7. Use the data either in user.component.ts or user.component.html file .
+#### 7. In user.component.html file take user input emit the event by help of received function GetDataFromChildEvent .
