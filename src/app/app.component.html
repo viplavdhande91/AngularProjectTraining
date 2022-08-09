@@ -1,6 +1,63 @@
 <h1>{{ title }}</h1>
-<span>INTERPOLATION(Not Working): <input type="text" value="{{ name }}" disabled="{{ statusOfDisabled }}" />
-</span>
-<br />
-<br />
-<span>PROPERTY BINDING(Working): <input type="text" [value]="name" [disabled]="statusOfDisabled" /></span>
+
+<h2>
+  Note: Angular's ng-template element defines a template that is not rendered by
+  default.It renders on Certain Condition.
+</h2>
+<h1 *ngIf="show; then ifBlock; else elseBlock;"></h1>
+
+<ng-template #ifBlock>
+  <h1>If Block</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>Else Block</h1>
+</ng-template>
+
+<hr />
+
+<h1>Multiple condition or else if</h1>
+<ng-template [ngIf]= "color === 'red'">
+  <h1 style="color: red">Red Color</h1>
+</ng-template>
+<ng-template [ngIf]= "color === 'green'">
+  <h1 style="color: green">Green Color</h1>
+</ng-template>
+<ng-template [ngIf]= "color === 'blue'">
+  <h1 style="color: blue">Blue Color</h1>
+</ng-template>
+
+<hr />
+
+<h1>Nested For Loop</h1>
+
+<ul *ngFor="let user of users">
+  <li>{{ user.name }}</li>
+  <li>{{ user.email }}</li>
+  <li>{{ user.phone }}</li>
+  <ul *ngFor="let account of user.accounts">
+    <li>{{ account }}</li>
+  </ul>
+</ul>
+<br /><br />
+
+<hr />
+
+<h1>Switch case</h1>
+<div [ngSwitch]="color1">
+  <h1 *ngSwitchCase="'red'" style="color: red">Red Color</h1>
+  <h1 *ngSwitchCase="'green'" style="color: green">Green Color</h1>
+  <h1 *ngSwitchCase="'blue'" style="color: blue">Blue Color</h1>
+  <h1 *ngSwitchCase="'orange'" style="color: orange">Orange Color</h1>
+  <h1 *ngSwitchDefault>Unknown Color</h1>
+</div>
+
+<hr/>
+
+
+<h1>CLASS AND STYLE BINDING DIRECTIVES [ng-Style,ng-Class]</h1>
+
+<div class = "class0" [ngClass]="multiClasses"> Class Display</div>
+
+
+<div  [ngStyle]="multiStyles"> Style Display</div>
