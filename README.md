@@ -1,28 +1,18 @@
-# HandsonProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+# Send data from Parent to Child Component
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### 1. Parent Component =>app ; Child Component =>user 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### 2. create data in app.component ts.
 
-## Build
+#### 3. Import display selector of user component in app.component.html file. i.e <app-user>  </app-user>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### 4. Bind dataSendFromParent property in app.component.html
 
-## Running unit tests
+#### 5. Import Input from angular Core in user.component.ts file
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### 6. Input Decorator inside class imports data. 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Angular-Training
+#### 7. Use the data either in user.component.ts or user.component.html file .
