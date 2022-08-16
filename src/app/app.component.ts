@@ -1,6 +1,8 @@
 
+import { UserdatashareService } from './services/userdatashare.service';
 
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'handson-project';
-  myname = 'Viplav';
+  users:any;
+  constructor(private userData : UserdatashareService)
+  {
+     console.log(userData.usersDataFunc())
+     this.users = userData.usersDataFunc();
 
-  student = { name: 'viplav', rank: 23 };
+  }
+ 
 }
