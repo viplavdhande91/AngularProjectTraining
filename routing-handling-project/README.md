@@ -1,6 +1,5 @@
 
-# Routing
-### BASIC Routing
+# BASIC Routing
 
 
 
@@ -30,7 +29,7 @@ const routes: Routes = [{component:AboutusComponent,
 
 ```
 
-### Dynamic Routing
+# Dynamic Routing
 
 #### 1. Note: Pass routerLink = "user/30" in app.component.html and Define routes in app-routing.module.ts For Example
 ```
@@ -58,7 +57,7 @@ const routes: Routes = [{component:AboutusComponent,
 ```
 
 
-### Child Routing
+# Child Routing
 
 #### 1. Make about[Parent Component] and aboutus and aboutme as child components.
 
