@@ -1,5 +1,3 @@
-
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public isCollapsed = false;
-
+  title = 'routing-handling-project';
 }
