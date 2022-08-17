@@ -1,6 +1,8 @@
 
 
 import { Component } from '@angular/core';
+import { WeatherDataServiceService } from './services/weather-data-service.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'handson-project';
-  myname = 'Viplav';
 
-  student = { name: 'viplav', rank: 23 };
+  weather: any;
+
+  constructor(private weatherData: WeatherDataServiceService) {
+    this.weatherData.weatherData().subscribe((data) => {  ///subscribe() is the function which 
+      //passes data to only required component[For E.g app component here]
+
+
+      console.log(data);
+      this.weather = data;
+
+    });
+  }
 }
