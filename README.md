@@ -1,28 +1,53 @@
-# HandsonProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+# LAZY LOADING
+ 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+#### 1.Create admin module with routing flag
+```
+ng g m admin --routing
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### 2.create two components in admin module.
+```
+ng g c admin/list
+ng g c admin/login
+```
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### 3.Add routes in admin-routing.module.ts
+```
+const routes: Routes = [{path: 'login' , component: LoginComponent},
 
-## Running unit tests
+ {path: 'list' , component: ListComponent}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+];
+```
 
-## Running end-to-end tests
+#### 4.Add routes in app-routing.module.ts
+```
+const routes: Routes = [
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+{
+path:'admin' , loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
 
-## Further help
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Angular-Training
+];
+```
+
+#### 5. Add routerLink in app.component.html
+
+
+#### 6. Add some temp code to verify lazy loading[Add in admin-module.ts]
+
+
+```
+console.warn("ADMIN MODULE LOADED"); //TO CHECK ADMIN MODULE GETS LOADED OR NOT
+
+```
+## Notes
+
+To achieve Lazy Loading never register AdminModule 
+in app.module.ts import section.
