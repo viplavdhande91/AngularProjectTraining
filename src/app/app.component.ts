@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'handson-project';
-  myname = 'Viplav';
-
-  student = { name: 'viplav', rank: 23 };
+  title = 'Angular Template Driven Form';
+  loginUser(item:any)
+  {
+    console.warn(item);
+  }
 }
