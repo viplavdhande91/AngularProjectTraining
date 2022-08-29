@@ -1,2 +1,10 @@
-<h2>Hello Angular</h2>
+<h2>API Calls in Angular</h2>
 
+<h1>Weather Data</h1>
+
+
+<ul *ngFor="let x of weather.dataseries">
+  <li>{{ x.cloudcover }}</li>
+  <li>{{ x.lifted_index }}</li>
+</ul>
+<br /><br />
