@@ -1,3 +1,4 @@
+import { ApiService } from './api.service';
 
 
 import { Component } from '@angular/core';
@@ -8,8 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'handson-project';
-  myname = 'Viplav';
+  public data: any;
 
-  student = { name: 'viplav', rank: 23 };
+  constructor(private apiService: ApiService) {
+
+  }
+  getData() {
+    this.apiService.getData().subscribe(
+      response => {
+        this.data = response;
+        console.log(this.data);
+      })
+  }
 }
