@@ -1,2 +1,14 @@
-<h2>Hello Angular</h2>
+<h2>Reactive Forms</h2>
 
+<form [formGroup] = "loginform" (ngSubmit) = "getFormData()">
+  <input type="text" placeholder="Enter Username"  formControlName ='user' />
+
+  <span style ="color: red;" *ngIf="userData &&  userData.invalid && userData.touched"> This field in invalid</span>
+  
+  <br /><br />
+
+  <input type="password" placeholder="Enter Password" formControlName ='password' />
+  <br /><br />
+
+  <button type="submit" [disabled]="loginform.invalid">Submit</button>
+</form>
