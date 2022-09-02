@@ -6,7 +6,7 @@
 
 #### 1.Create Service inside services folder
 ```
-ng generate service services/WeatherDataService {
+ng generate service services/WeatherDataService 
 
 ```
 
