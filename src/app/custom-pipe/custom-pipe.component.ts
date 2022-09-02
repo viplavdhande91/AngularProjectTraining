@@ -10,7 +10,7 @@ import { Pipe, PipeTransform } from '@angular/core'
 export class CustomPipeComponent implements OnInit {
 
 
-  weight = 2;
+  weight = 2; //KG
   constructor() { }
 
   ngOnInit(): void {
@@ -25,7 +25,8 @@ export class CustomPipeComponent implements OnInit {
 export class ToGramsPipe implements PipeTransform {
 
 
-  transform(n: number, extension: string = 'grams') {
-    return (n * 100).toFixed(2) + extension;
+  transform(n: number, extension: string = 'grams') 
+  {
+    return (n * 1000).toFixed(2) + extension;
   }
 }
