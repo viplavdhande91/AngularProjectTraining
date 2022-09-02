@@ -4,7 +4,7 @@
   Note: Angular's ng-template element defines a template that is not rendered by
   default.It renders on Certain Condition.
 </h2>
-<h1 *ngIf="show; then ifBlock; else elseBlock;"></h1>
+<h1 *ngIf="show; then ifBlock; else elseBlock"></h1>
 
 <ng-template #ifBlock>
   <h1>If Block</h1>
@@ -17,13 +17,15 @@
 <hr />
 
 <h1>Multiple condition or else if</h1>
-<ng-template [ngIf]= "color === 'red'">
+
+
+<ng-template [ngIf]="color === 'red'">
   <h1 style="color: red">Red Color</h1>
 </ng-template>
-<ng-template [ngIf]= "color === 'green'">
+<ng-template [ngIf]="color === 'green'">
   <h1 style="color: green">Green Color</h1>
 </ng-template>
-<ng-template [ngIf]= "color === 'blue'">
+<ng-template [ngIf]="color === 'blue'">
   <h1 style="color: blue">Blue Color</h1>
 </ng-template>
 
@@ -52,12 +54,10 @@
   <h1 *ngSwitchDefault>Unknown Color</h1>
 </div>
 
-<hr/>
-
+<hr />
 
 <h1>CLASS AND STYLE BINDING DIRECTIVES [ng-Style,ng-Class]</h1>
 
-<div class = "class0" [ngClass]="multiClasses"> Class Display</div>
+<div class="class0" [ngClass]="multiClasses">Class Display</div>
 
-
-<div  [ngStyle]="multiStyles"> Style Display</div>
+<div [ngStyle]="multiStyles">Style Display</div>
