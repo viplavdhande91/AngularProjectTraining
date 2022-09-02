@@ -21,7 +21,7 @@ export class AppComponent {
 
   getData(val:string)
   {
-    console.log("mouseenter");
+    console.log(val);
   }
 
   
