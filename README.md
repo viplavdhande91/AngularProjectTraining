@@ -8,7 +8,7 @@ ng add @ng-bootstrap/ng-bootstrap
 ```
 
 
-####  Note: Add below path into angular.json if not automatically added
+####  Note: Add below path into  "styles" in angular.json if not automatically added
 ```bash
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
 ```
