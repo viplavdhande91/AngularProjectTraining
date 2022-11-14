@@ -32,6 +32,7 @@ export class AppComponent  {
     sessionStorage.setItem('Name2', 'ajay');
     sessionStorage.setItem('Sabzi', JSON.stringify(impArray));
     
+    
     // Clears the entire local storage
     // localStorage.clear();
     
