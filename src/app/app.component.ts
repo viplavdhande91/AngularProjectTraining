@@ -11,6 +11,6 @@ export class AppComponent {
 
   title = 'Property Binding';
   name = "Peter";
-  statusOfDisabled = false; //CHECK FOR BOTH VALUES true/false
+  flag = false; //CHECK FOR BOTH VALUES true/false
 
 }

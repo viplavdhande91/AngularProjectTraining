@@ -1,6 +1,6 @@
 <h1>{{ title }}</h1>
-<span>INTERPOLATION(Not Working): <input type="text" value="{{ name }}" disabled="{{ statusOfDisabled }}" />
+<span>INTERPOLATION(Not Working): <input type="text" value="{{ name }}" disabled="{{ flag }}" />
 </span>
 <br />
 <br />
-<span>PROPERTY BINDING(Working): <input type="text" [value]="name" [disabled]="statusOfDisabled" /></span>
+<span>PROPERTY BINDING(Working): <input type="text" [value]="name" [disabled]="flag" /></span>
