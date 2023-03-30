@@ -15,6 +15,7 @@ export class UserComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(typeof this.dataSendFromParent);
 
     console.log(this.dataSendFromParent);
   }
