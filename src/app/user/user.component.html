@@ -3,4 +3,4 @@
 <label for="box-input">Name:</label>
 <input type="text" #box name="box-input"/>
 
-<button (click) = "GetDataFromChildEvent.emit(box.value)">Send Data to Parent </button>
+<button (click) = "outputSend.emit(box.value)">Submit </button>

@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
 
   constructor() { }
 
-  @Output() GetDataFromChildEvent = new EventEmitter<string>(); //string because we have to pass string data
+  @Output() outputSend = new EventEmitter<string>(); //string because we have to pass string data
   ngOnInit(): void {
 
   }
