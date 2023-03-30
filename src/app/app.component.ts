@@ -15,7 +15,7 @@ export class AppComponent {
     this.weatherData.weatherData().subscribe((data) => {  
       ///subscribe() is the function which 
       //passes data to only required component[For E.g app component here]
-      console.log(data);
+      // console.log(data);
       this.weather = data;
 
     });

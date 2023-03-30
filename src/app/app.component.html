@@ -3,8 +3,20 @@
 <h1>Weather Data</h1>
 
 
-<ul *ngFor="let x of weather.dataseries">
-  <li>{{ x.cloudcover }}</li>
-  <li>{{ x.lifted_index }}</li>
-</ul>
-<br /><br />
+<table>
+  <tr>
+    <th>cloudcover</th>
+    <th>lifted_index</th>
+    <th>prec_type</th>
+    <th>rh2m</th>
+    <th>seeing</th>
+  </tr>
+  <tr *ngFor="let x of weather.dataseries">
+    <td>{{ x.cloudcover }}</td>
+    <td>{{ x.lifted_index }}</td>
+    <td>{{ x.prec_type }}</td>
+    <td>{{ x.rh2m }}</td>
+    <td>{{ x.seeing }}</td>
+
+  </tr>
+</table>
