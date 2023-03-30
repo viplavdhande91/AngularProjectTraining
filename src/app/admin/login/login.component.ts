@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.warn("ADMIN LOGIN COMPONENT LOADED"); //TO CHECK ADMIN LOGIN COMPONENT GETS LOADED OR NOT
+    console.warn("ADMIN :  LOGIN COMPONENT LOADED"); //TO CHECK ADMIN LOGIN COMPONENT GETS LOADED OR NOT
 
   }
 

@@ -11,7 +11,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.warn("ADMIN LIST COMPONENT LOADED"); //TO CHECK ADMIN LIST COMPONENT GETS LOADED OR NOT
+    console.warn("ADMIN : LIST COMPONENT LOADED"); //TO CHECK ADMIN LIST COMPONENT GETS LOADED OR NOT
 
   }
 
