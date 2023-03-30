@@ -9,7 +9,7 @@ import { FormControl, FormGroup ,Validator, Validators} from '@angular/forms'
 })
 export class AppComponent {
 
-
+  //FORM OBJECT
   loginform = new FormGroup({
 
     user: new FormControl('',[Validators.required,Validators.email]),
@@ -18,7 +18,7 @@ export class AppComponent {
   })
 
 
-  getFormData()
+  getFormData() :void
   {
     console.log(this.loginform.value);
   }
