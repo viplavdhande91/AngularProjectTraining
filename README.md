@@ -3,18 +3,18 @@
 
 
 
-1)To generate only  HTML file and Inline CSS 
+1)To get rid of CSS 
 
 ```bash
   ng generate component c1 --inline-style
 ```
 
-2)To generate only  CSS file and Inline HTML 
+2)To get rid of HTML file
 
 ```bash
   ng generate component c2 --inline-template
 ```
-3)To generate only inline HTML  and Inline CSS 
+3)To get rid of HTML file andf css file
 
 ```bash
   ng generate component c3 --inline-style --inline-template
