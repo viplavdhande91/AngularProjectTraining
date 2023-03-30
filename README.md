@@ -13,7 +13,7 @@ ng generate interceptor headers
 
 #### 2. Import into header.interceptor.ts
 ```
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptor } from '@angular/common/http';
 
 ```
 

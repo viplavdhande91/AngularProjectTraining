@@ -15,8 +15,7 @@ export class AppComponent {
 
   }
   getData() {
-    this.apiService.getData().subscribe(
-      response => {
+    this.apiService.getData().subscribe(response => {
         this.data = response;
         console.log(this.data);
       })
