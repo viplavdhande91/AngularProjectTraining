@@ -1,6 +1,6 @@
 
 
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'handson-project';
   myname = 'Viplav';
+
+  constructor(public e1 : ElementRef){
+
+
+  }
+
+  ngOnInit(): void{
+    console.log(this.e1);
+  }
 
   student = { name: 'viplav', rank: 23 };
 }
