@@ -16,11 +16,10 @@ export class AppComponent {
 
   color = "blue";
 
-  color1 = "red";
 
   users = [
-    { name: 'Viplav', phone: '1111', email: 'viplav@test.com', accounts: ['facebook', 'gmail', 'linkedin'] },
-    { name: 'Bruce', phone: '2299', email: 'bruce@test.com', accounts: ['Gmail', 'gmail', 'youtube'] },
+    { name: 'Viplav', phone: '1111', email: 'viplav@test.com' },
+    { name: 'Bruce', phone: '2299', email: 'bruce@test.com' },
 
   ]
 
@@ -32,8 +31,10 @@ export class AppComponent {
   };
 
   multiStyles = {
-    'background': 'red',
-    'border': '10px solid green'
+    'background': 'rebeccapurple',
+    'border': '2px solid yellow',
+    'color': '#fff',
+    'height': '100px'
   };
 
 }
