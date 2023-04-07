@@ -37,4 +37,6 @@ export class AppComponent {
     'height': '100px'
   };
 
+ componentDirective = "@Component({selector: 'app-root',templateUrl: './app.component.html',styleUrls: ['./app.component.css']})";
+
 }
