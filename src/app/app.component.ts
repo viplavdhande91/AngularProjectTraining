@@ -2,6 +2,20 @@
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { Component } from '@angular/core';
+interface dsaData {
+  dsa?: object;
+
+}
+
+
+interface dsaData {
+  easy?: object;
+  medium?: object;
+  hard?: object;
+}
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -10,6 +24,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public chart: any;
+  public data : dsaData  = {};
 
   ngOnInit(): void {
     this.ChartCallMethod();
@@ -19,9 +34,13 @@ export class AppComponent {
 
   ChartCallMethod(): void {
 
+    this.data.easy =   [5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    this.data.medium = [5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    this.data.hard =   [5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
     let dataFirst = {
       label: "Easy",
-      data: [5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      data: this.data.easy,
       lineTension: 0,
       fill: false,
       borderColor: 'green',
@@ -33,7 +52,7 @@ export class AppComponent {
 
     let dataSecond = {
       label: "Medium",
-      data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      data: this.data.medium,
       lineTension: 0,
       fill: false,
       borderColor: 'yellow',
@@ -44,7 +63,7 @@ export class AppComponent {
 
     let dataThird = {
       label: "Hard",
-      data: [0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      data: this.data.hard,
       lineTension: 0,
       fill: false,
       borderColor: 'red',
