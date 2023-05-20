@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
-  GetDataFromChild(item : string)
+
+  GetDataFromChild(item : string) :void
   {  
      console.log(item);
   }
