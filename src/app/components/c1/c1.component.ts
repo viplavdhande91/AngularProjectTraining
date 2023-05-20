@@ -16,7 +16,7 @@ export class C1Component implements OnInit {
   dataSetter(): void {
 
 
-    this.todoservice.data = "My Score is 82%";
+    this.todoservice.data = "I am coming from c1";
 
 
   }
