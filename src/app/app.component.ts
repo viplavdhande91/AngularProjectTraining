@@ -2,16 +2,14 @@
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { Component } from '@angular/core';
-interface dsaData {
-  dsa?: object;
 
-}
 
 
 interface dsaData {
   easy?: number[];
   medium?: number[];
   hard?: number[];
+  total?: number[];
 }
 
 
@@ -24,15 +22,14 @@ interface dsaData {
 })
 export class AppComponent {
   public chart: any;
+  public totalSum !: number;
+  public completedSum !: number;
+
   public data: dsaData = {};
 
-  ngOnInit(): void {
-    this.ChartCallMethod();
-
-  }
-
-
-  ChartCallMethod(): void {
+  constructor() {
+    this.data.total = [27, 26, 27, 21, 33, 28, 0, 54, 40, 22, 6, 10, 22, 23, 21, 6]
+    this.totalSum = this.data.total.reduce((partialSum, a) => partialSum + a, 0);
 
     this.data.easy = [];
     this.data.medium = [];
@@ -91,40 +88,64 @@ export class AppComponent {
     this.data.hard[14] = 0; //      'Backtracking',
     this.data.hard[15] = 0; //      'Trie'
 
+    let easySum = 0;
+    this.data.easy.map(x => easySum += x);
+
+    let mediumSum = 0;
+    this.data.easy.map(x => mediumSum += x);
+
+    let hardSum = 0;
+    this.data.easy.map(x => hardSum += x);
+
+    this.completedSum = easySum + mediumSum + hardSum;
+  }
+  ngOnInit(): void {
+
+    this.ChartCallMethod();
+
+  }
 
 
-    let dataFirst = {
+  ChartCallMethod(): void {
+
+
+
+
+
+    let easyData = {
       label: "Easy",
       data: this.data.easy,
       lineTension: 0,
-      fill: false,
-      borderColor: 'green',
-      pointStyle: 'circle',
-      pointRadius: 10,
-      pointHoverRadius: 15
+      pointRadius: 5,
+
 
     };
 
-    let dataSecond = {
+    let mediumData = {
       label: "Medium",
       data: this.data.medium,
       lineTension: 0,
-      fill: false,
-      borderColor: 'yellow',
-      pointStyle: 'triangle',
-      pointRadius: 10,
-      pointHoverRadius: 15
+      pointRadius: 5,
+
+
     };
 
-    let dataThird = {
+    let hardData = {
       label: "Hard",
       data: this.data.hard,
       lineTension: 0,
-      fill: false,
-      borderColor: 'red',
-      pointStyle: 'rect',
-      pointRadius: 10,
-      pointHoverRadius: 15
+      pointRadius: 5,
+
+
+    };
+
+    let totalData = {
+      label: "total",
+      data: this.data.total,
+      lineTension: 0,
+      pointRadius: 5,
+
+
     };
 
 
@@ -135,21 +156,25 @@ export class AppComponent {
       data: {// values on X-Axis
         labels: ['Arrays', 'LinkedList', 'Stacks & Queues', 'BST', 'Binary Tree', 'Heaps & Hashing', 'Recursion',
           'DP', 'Graphs', 'Greedy', 'Segment Trees', '2dArray', 'Strings', 'Searching & Sorting', 'Backtracking', 'Trie'],
-        datasets: [dataFirst, dataSecond, dataThird]
+        datasets: [easyData, mediumData, hardData, totalData]
       },
       options: {
         aspectRatio: 2.5,
         responsive: true,
         plugins: {
           legend: {
-            position: 'top',
+            display: true,
+            position: 'bottom',
+            labels: { color: 'darkred', }
           },
           title: {
             display: true,
             text: 'DSA Statistics',
 
           }
-        }
+        },
+
+
 
       }
 
