@@ -5,7 +5,7 @@
 1. Create two components c1 and c2 [Here Sending data  c1- > c2]
 
 
-2. Create todos service.By Default ProvidedIn should be root. By that only one instance of service is created at root level and can be injected and shared for any component.
+2. Create todos service.By Default ProvidedIn should be root. By that only **one instance of service is created** at root level and can be injected and shared for any component.
 ```bash
 @Injectable({
   providedIn: 'root'
