@@ -29,6 +29,7 @@
 5.Inject service inside in c2 using public access modifer view data inside component.
 
 
-
-
-
+6.Here we define how to share data between components 
+ - We can share data from parent to child via **@Input**
+ - We can share data from child to parent via **ViewChild**
+ - We can share data from child to parent via **@Output** for button clicks or Form entries
