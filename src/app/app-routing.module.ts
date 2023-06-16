@@ -7,14 +7,10 @@ import { C3Component } from './components/c3/c3.component';
 import { C4Component } from './components/c4/c4.component';
 
 
-const routes: Routes = [{ path: 'c1', component: C1Component, canActivate : [G1Guard] 
-},
-{ path: 'c2', component: C2Component 
-},
-{ path: 'c3', component: C3Component 
-},
-{ path: 'c4', component: C4Component
-},
+const routes: Routes = [{ path: 'c1', component: C1Component, canActivate : [G1Guard] },
+                        { path: 'c2', component: C2Component },
+                        { path: 'c3', component: C3Component },
+                        { path: 'c4', component: C4Component },
 ];
 
 @NgModule({
