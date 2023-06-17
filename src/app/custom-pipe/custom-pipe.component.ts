@@ -18,14 +18,14 @@ export class CustomPipeComponent implements OnInit {
 
 }
 
-
+//PIPE LOGIC
 @Pipe({
   name: 'toGrams' //THIS NAME WILL BE USED ON CORRESPONDING HTML TEMPLATE
 })
 export class ToGramsPipe implements PipeTransform {
 
 
-  transform(n: number, extension: string = 'grams') 
+  transform(n: number, extension: string = 'grams') :String
   {
     return (n * 1000).toFixed(2) + extension;
   }
