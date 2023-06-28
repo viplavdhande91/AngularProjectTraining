@@ -25,8 +25,9 @@ export class CustomPipeComponent implements OnInit {
 export class ToGramsPipe implements PipeTransform {
 
 
-  transform(n: number, extension: string = 'grams') :String
+  transform(n: number) :String
   {
+    let extension: string = 'grams'
     return (n * 1000).toFixed(2) + extension;
   }
 }
