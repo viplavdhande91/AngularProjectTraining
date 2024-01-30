@@ -2,9 +2,10 @@
  
 In Angular, if we want to access the template information; i.e, any element from the html file in the ts file or in our component the we can choose the **@viewchild** concept.
  
-By using @viewchild we can achieve the following things,
+By using @ViewChild we can achieve the following things,
 - Accessing template of same component
 - Accessing the template of child component
+- to pass data from Parent to Child Component
 
 ### Syntax of creating the @viewchild variable
  ```
