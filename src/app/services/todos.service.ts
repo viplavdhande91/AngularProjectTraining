@@ -9,10 +9,7 @@ export class TodosService {
 
   constructor(private http: HttpClient) { }
 
-
   todosData() {
-
-
     return this.http.get(this.link);
   }
 }
