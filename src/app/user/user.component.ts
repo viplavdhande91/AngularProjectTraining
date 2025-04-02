@@ -1,23 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-
-
-
-
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
   @Input() dataSendFromParent: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    
     console.log(typeof this.dataSendFromParent);
 
     console.log(this.dataSendFromParent);
   }
-
 }
