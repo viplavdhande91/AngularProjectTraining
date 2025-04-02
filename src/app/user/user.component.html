@@ -1,6 +1,6 @@
 <p>child component</p>
 
-<label for="box-input">Name:</label>
-<input type="text" #box name="box-input"/>
+<label>Name:</label>
+<input type="text" #box/>
 
 <button (click) = "outputSend.emit(box.value)">Submit </button>
