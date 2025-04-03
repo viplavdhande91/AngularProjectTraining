@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WeatherDataServiceService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-   
-   link = "https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0";
+  link =
+    'https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0';
 
-
-  weatherData()
-  {
-
-
+  weatherData() {
     return this.http.get(this.link);
   }
 }
